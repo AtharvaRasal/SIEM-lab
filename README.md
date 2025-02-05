@@ -127,12 +127,18 @@ In a SIEM, alerts are a crucial feature for detecting security incidents and res
     
   - Click on “Manage rules” at the top right.
 
+![Screenshot 2025-02-06 021345](https://github.com/user-attachments/assets/9cc01a83-8478-43c3-bd68-e9b9b9242198)
+
   - Click on the “Create new rule” button at the top right.
+
+
 
   - Under the “Define rule” section, select the “Custom query” option from the dropdown menu.
 
   - Under “Custom query”, set the conditions for the rule. You can use the following query to detect Nmap scan events.
    ` event.action:"nmap_scan"`
+
+![Screenshot 2025-02-06 021538](https://github.com/user-attachments/assets/c4f70a12-cec7-4133-8d09-40686c2fd969)
 
   - Under the “About rule” section, give your rule a name and a description.
 
@@ -141,7 +147,11 @@ In a SIEM, alerts are a crucial feature for detecting security incidents and res
 
   - In the “Actions” section, select the action you want to take when the rule is triggered. You can choose to send an email notification, create a Slack message, or trigger a custom webhook.
 
+![Screenshot 2025-02-06 021838](https://github.com/user-attachments/assets/2167941f-aba6-40a8-b60d-b8cf9b32e909)
+
   - Finally, click the “Create and enable rule” button to create the alert.
+
+![Screenshot 2025-02-06 021911](https://github.com/user-attachments/assets/8474f014-7e3b-40a5-8bf3-c0a977e64be8)
 
 
 Once you’ve created the alert, it will monitor your logs for Nmap scan events. If an Nmap scan event is detected, the alert will be triggered and the selected action will be taken. You can view and manage your alerts on the “Alerts” section under “Security.”
