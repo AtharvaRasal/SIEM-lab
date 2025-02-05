@@ -39,18 +39,23 @@ Next, we need to set up the Linux VM. You can use any Linux OS and virtualizatio
 
 <h3>3.Setting up the Agent to Collect Logs</h3>
 
-An agent is a software program that is installed on a device, such as a server or endpoint, to collect and send data to a centralized system for analysis and monitoring. In the context of Elastic SIEM, an agent is used to collect and forward security-related events from your endpoints to your Elastic SIEM instance.
+An agent is a software program that is installed on a device, such as a server or an endpoint, to collect and send data to a centralized system for analysis and monitoring. In the context of Elastic SIEM, an agent is used to collect and forward security-related events from your endpoints to your Elastic SIEM instance.
 
 To set up the agent to collect logs from your Kali VM and forward them to your Elastic SIEM instance, follow these steps:
 
  1. Log in to your Elastic SIEM instance and navigate to the Integrations page.
 
+![1](https://github.com/user-attachments/assets/01bff0f9-6a16-4dab-a85f-a9b12dc843eb)
+
  2. Search for “Elastic Defend” and click on it to open the integration page.
 
+![Screenshot 2025-02-05 190801](https://github.com/user-attachments/assets/b213dffe-877b-4212-9427-8377d895f1b1)
 
  3. Click on “Install Elastic Defend” and follow the instructions provided on the integration page to install the agent on your Kali VM.
 
+
  4. Paste that command from the elastic defend integration page into the Kali terminal (command line).
+
 
  5. Once the agent is installed, which can take a few minutes, you’ll see a message that says “Elastic Agent has been successfully installed.” It will automatically start collecting and forwarding logs to your Elastic SIEM instance, although it might take a few minutes for the logs to appear in the SIEM.
 
@@ -73,6 +78,8 @@ To do this, follow these steps:
 
   - Inside your Elastic Deployment, locate the “Logs” tab under “Observability” to view the logs from the Kali VM.
 
+![4](https://github.com/user-attachments/assets/4d01c963-9e01-48a6-a74d-d27c5c583146)
+
   - In the search bar, enter a search query to filter the logs. For example, to search for all logs related to Nmap scans, enter the query: event.action:
 “nmap_scan”.
 
@@ -94,14 +101,21 @@ Here’s how you can do that:
 
   - Click on the “Create dashboard” button on the top right to create a new dashboard.
 
+![Screenshot 2025-02-05 212525](https://github.com/user-attachments/assets/71ce0150-0b26-4e94-a148-28ac493265df)
+
   - Click on the “Create Visualization” button to add a new visualization to the dashboard.
+
+![Screenshot 2025-02-05 212629](https://github.com/user-attachments/assets/127f9ffd-ebc1-48d3-9f65-0b17de916b04)
 
   - Select “Area” or “Line” as the visualization type, depending on your preference. This will create a chart that shows the count of events over time.
 
   - In the “Metrics” section of the visualization editor on the right, select “Count” as the vertical field type and “Timestamp” for the horizontal field. This will show the count of events over time.
 
+![Screenshot 2025-02-05 212742](https://github.com/user-attachments/assets/4b220089-1860-4f67-babe-ab09c76117f6)
+
   - Click on the “Save” button to save the visualization.
 
+![5](https://github.com/user-attachments/assets/be4b153f-d469-4212-984e-847e4c047565)
 
 
 <h3>7.Create an Alert</h3>
